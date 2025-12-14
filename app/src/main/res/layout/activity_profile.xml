@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+    <TextView
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Profile"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8F8F8">
+
+        <!-- RelativeLayout for Profile Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muhammad Azhar"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/profile_image"
+                android:layout_alignTop="@id/profile_image" />
+
+            <TextView
+                android:id="@+id/profile_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android Developer"
+                android:textSize="14sp"
+                android:layout_below="@id/profile_name"
+                android:layout_toEndOf="@id/profile_image"
+                android:textColor="#666" />
+        </RelativeLayout>
+
+        <!-- LinearLayout for Basic Info -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp">
+
+            <TextView
+                android:text="Email: azhar@example.com"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone: +92 300 1234567"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skills" />
+        <!-- GridLayout for Social Media Icons -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:columnCount="5"
+            android:alignmentMode="alignMargins"
+            android:rowCount="2"
+            android:useDefaultMargins="true">
+
+            <ImageView
+                android:id="@+id/skill_android"
+                android:src="@drawable/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="onSkillClick"
+                android:contentDescription="Android" />
+
+            <ImageView
+                android:id="@+id/skill_java"
+                android:src="@drawable/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="onSkillClick"
+                android:contentDescription="Java" />
+
+            <ImageView
+                android:id="@+id/skill_kotlin"
+                android:src="@drawable/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="onSkillClick"
+                android:contentDescription="Kotlin" />
+
+            <ImageView
+                android:id="@+id/skill_flutter"
+                android:src="@drawable/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="onSkillClick"
+                android:contentDescription="Flutter" />
+
+            <ImageView
+                android:id="@+id/skill_react"
+                android:src="@drawable/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="onSkillClick"
+                android:contentDescription="React Native" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="italic"
+            android:onClick="goToLogin"
+            android:text="@string/str_goto_login_u"/>
+    </LinearLayout>
+
+</LinearLayout>
